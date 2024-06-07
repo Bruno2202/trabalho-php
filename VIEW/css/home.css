@@ -1,0 +1,70 @@
+:root {
+    --background-color: #FFFFFF;
+    --primary-color: #fa2d56;
+    --primary-dark: #B02D56;
+    --secondary-color: #fff2f2;
+    --tertiary-color: #8c8c8c;
+    --text-color1: #000000;
+    --text-color2: #FFFFFF;
+}
+
+.material-symbols-outlined {
+  color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: var(--text-color2);
+    background-color: var(--primary-color);
+    width: 100vw;
+    padding: 0px  16%;
+}
+
+.app_name {
+    font-family: 'LS_bold';
+    font-size: 1.4rem;
+}
+
+.navigation {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+    
+.nav_option {
+    cursor: pointer;
+    height: 100%;
+    padding: 16px;
+    padding: 12px 20px;
+    transition: all ease-in-out 0.2s;
+    height: 100%;
+}
+
+.nav_option:hover {
+    background-color: var(--primary-dark);
+}
+
+.nav_icons {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}

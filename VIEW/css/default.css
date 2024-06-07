@@ -1,0 +1,88 @@
+:root {
+    --background-color: #FFFFFF;
+    --primary-color: #161B22;
+    --secondary-color: #0D1117;
+    --text-color: #F5F3E2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  font-family: 'LS';
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face{
+  font-family: 'LS';
+  src: url('../../SRC/FONTS/LeagueSpartan-VariableFont_wght.ttf') format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'LS_bold';
+  src: url('../../SRC/FONTS/LeagueSpartan-Bold.ttf') format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'LS_medium';
+  src: url('../../SRC/FONTS/LeagueSpartan-Medium.ttf') format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'LS_regular';
+  src: url('../../SRC/FONTS/LeagueSpartan-Regular.ttf') format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'LS_light';
+  src: url('../../SRC/FONTS/LeagueSpartan-Light.ttf') format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
