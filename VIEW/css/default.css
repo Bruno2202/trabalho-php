@@ -29,7 +29,7 @@ ul, ol {
   list-style: none;
   padding: 0;
 }
-
+ 
 body {
   font-family: 'LS';
   background-color: var(--background-color);
