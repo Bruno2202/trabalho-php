@@ -41,13 +41,13 @@
         <div id="carouselExample" class="carousel slide" style="width: 100vw;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../SRC/IMG/C3.png" class="d-block w-100" alt="C3">
+                    <img src="../ASSETS/IMG/C3.png" class="d-block w-100" alt="C3">
                 </div>
                 <div class="carousel-item">
-                    <img src="../SRC/IMG/C2.png" class="d-block w-100" alt="C2">
+                    <img src="../ASSETS/IMG/C2.png" class="d-block w-100" alt="C2">
                 </div>
                 <div class="carousel-item">
-                    <img src="../SRC/IMG/C1.png" class="d-block w-100" alt="C1">
+                    <img src="../ASSETS/IMG/C1.png" class="d-block w-100" alt="C1">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -66,7 +66,7 @@
         </div>
 
         <!-- <div class="frame2">
-            <img class="frame2_img" src="../SRC/IMG/frame.png" alt="frame2">
+            <img class="frame2_img" src="../ASSETS/IMG/frame.png" alt="frame2">
         </div> -->
     </div>
 

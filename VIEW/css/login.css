@@ -23,7 +23,7 @@
 }
 
 .card_left {
-    background-image: url('../../SRC/IMG/piano.png');
+    background-image: url('../../ASSETS/IMG/piano.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--background-color);

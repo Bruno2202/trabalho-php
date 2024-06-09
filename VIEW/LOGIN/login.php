@@ -16,7 +16,7 @@
             home
         </a>
         <div class="card_left">
-            <img class="vector" src="../../SRC/IMG/vector.png">
+            <img class="vector" src="../../ASSETS/IMG/vector.png">
         </div>
         <div class="card_right">
             <form class="form" method="POST" action="./script.php">

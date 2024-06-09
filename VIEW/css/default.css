@@ -54,35 +54,35 @@ video {
 
 @font-face{
   font-family: 'LS';
-  src: url('../../SRC/FONTS/LeagueSpartan-VariableFont_wght.ttf') format(truetype);
+  src: url('../../ASSETS/FONTS/LeagueSpartan-VariableFont_wght.ttf') format(truetype);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face{
   font-family: 'LS_bold';
-  src: url('../../SRC/FONTS/LeagueSpartan-Bold.ttf') format(truetype);
+  src: url('../../ASSETS/FONTS/LeagueSpartan-Bold.ttf') format(truetype);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face{
   font-family: 'LS_medium';
-  src: url('../../SRC/FONTS/LeagueSpartan-Medium.ttf') format(truetype);
+  src: url('../../ASSETS/FONTS/LeagueSpartan-Medium.ttf') format(truetype);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face{
   font-family: 'LS_regular';
-  src: url('../../SRC/FONTS/LeagueSpartan-Regular.ttf') format(truetype);
+  src: url('../../ASSETS/FONTS/LeagueSpartan-Regular.ttf') format(truetype);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face{
   font-family: 'LS_light';
-  src: url('../../SRC/FONTS/LeagueSpartan-Light.ttf') format(truetype);
+  src: url('../../ASSETS/FONTS/LeagueSpartan-Light.ttf') format(truetype);
   font-weight: normal;
   font-style: normal;
 }

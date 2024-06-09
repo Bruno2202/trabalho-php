@@ -22,7 +22,7 @@
 }
 
 .card_left {
-    background-image: url('../../SRC/IMG/violao.png');
+    background-image: url('../../ASSETS/IMG/violao.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--background-color);

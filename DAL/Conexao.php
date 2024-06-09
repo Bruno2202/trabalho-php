@@ -22,7 +22,7 @@
             return self::$cont; 
         }
 
-        public static function desconectar (){
+        public static function desconectar() {
             self::$cont = null;
             return self::$cont;  
         }
