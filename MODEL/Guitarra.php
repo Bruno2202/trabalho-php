@@ -8,7 +8,7 @@
         private ?string $marca; 
         private ?int $ano; 
         private ?int $numCordas; 
-        private ?int $cor; 
+        private ?string $cor; 
 
         public function __construct() { }
 

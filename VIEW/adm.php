@@ -25,11 +25,17 @@
             </div>
         </header>
         <section class="blocks">
-            <a class="block" href="">
+            <a class="block" href="./GUITARRA/cadastro.php">
                 <span class="material-symbols-outlined">
                     app_registration
                 </span>
                 Cadastro de Guitarras
+            </a>
+            <a class="block" href="./GUITARRA/gerenciador.php">
+                <span class="material-symbols-outlined">
+                    inventory
+                </span>
+                Gerenciador de Guitarras
             </a>
             <a class="block" href="">
                 <span class="material-symbols-outlined">
@@ -48,12 +54,6 @@
                     app_registration
                 </span>
                 Cadastro de Batrerias
-            </a>
-            <a class="block" href="">
-                <span class="material-symbols-outlined">
-                    inventory
-                </span>
-                Gerenciador de Guitarras
             </a>
             <a class="block" href="">
                 <span class="material-symbols-outlined">

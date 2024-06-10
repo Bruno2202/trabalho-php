@@ -11,16 +11,9 @@
    $linha = $query->fetch(\PDO::FETCH_ASSOC);
    DAL\Conexao::desconectar(); 
 
-    // echo "Usuario: " . $linha['NOME'] . "</br>"; 
-    // echo "Senha banco: " . $linha['SENHA']. "</br>" . "</br>";
-    // echo "Senha digitada: " . $passowrd . "</br>" . "</br>";
-    // echo "Senha md5 digitada: " . md5($passowrd) . "</br>" . "</br>"; 
-
-
-    if(md5($passowrd) == $linha['SENHA']){
+    if (md5($passowrd) == $linha['SENHA']) {
             session_start();
             $_SESSION['login'] = $email;
             header("location:../adm.php");
     } else header("location:../home.php");
-
 ?>

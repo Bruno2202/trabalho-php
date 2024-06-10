@@ -30,4 +30,16 @@ class Guitarra
 
         return $lstGuit;
     }
+
+    public function Delete(int $id){
+        $sql = "delete from guitarra WHERE ID_GUITARRA = ?;";
+        
+        $con = Conexao::conectar();
+        $query = $con->prepare($sql);
+        $result = $query->execute(array( $id ));
+        $con = Conexao::desconectar();
+      
+        return $result; 
+    }
 }
+?>
