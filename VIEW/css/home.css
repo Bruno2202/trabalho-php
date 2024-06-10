@@ -7,14 +7,14 @@
     --text-color1: #000000;
     --text-color2: #FFFFFF;
 }
- 
+
 .material-symbols-outlined {
-  color: white;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    color: white;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 .searchIcon {
@@ -51,6 +51,10 @@
 }
 
 .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100vw;
     height: auto;
 }
@@ -64,7 +68,7 @@
     color: var(--text-color2);
     background-color: var(--primary-color);
     width: 100vw;
-    padding: 0px  16%;
+    padding: 0px 16%;
 }
 
 .app_name {
@@ -82,7 +86,7 @@
     gap: 40px;
 }
 
-    
+
 .nav_option {
     cursor: pointer;
     height: 100%;
@@ -104,34 +108,54 @@
     gap: 40px;
 }
 
-.frame1 {
-    width: 100vw;
-    height: 80vh;
+.container2 {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--text-color1);
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.144)
-}
-
-.frame1 > h1 {
-    font-size: 4rem;
-    font-family: 'LS_bold';
-}
-
-.frame1 > p {
-    font-size: 1rem;
-    font-family: 'LS_medium';
-}
-
-.frame2 {
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+    height: auto;
+    margin-top: 120px;
 }
 
-.frame2_img {
-    height: auto;
+.blocks {
+    margin: 60px 0px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 50%;
+    height: 100%; 
+}
+
+.title {
+    color: var(--text-color1);
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'LS_medium';
+    width: 60%;
+}
+
+.separator {
+    width: 60%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--tertiary-color);
+}
+
+.blocks > a > img {
+    width: 250px;
+    height: 250px;
+    border-radius: 6px;
+    transition: all ease-in-out 0.2s;
+    width: 250px;
+    height: 250px;
+    border-radius: 6px;
+}
+
+.blocks > a > img:hover {
+    width: 260px;
+    height: 260px;
 }
