@@ -14,6 +14,18 @@ class Guitarra
         return $dalGuit->Select();
     }
 
+    public function SelectByID(int $id)
+    {
+        $dalGuit = new \DAL\Guitarra();
+        return $dalGuit->SelectByID($id);
+    }
+
+    public function Update(\MODEL\Guitarra $guitarra)
+    {
+        $dalGuit = new \DAL\Guitarra();
+        return $dalGuit->Update($guitarra);
+    }
+
     public function Delete(int $id)
     {
         $dalGuit = new \DAL\Guitarra();

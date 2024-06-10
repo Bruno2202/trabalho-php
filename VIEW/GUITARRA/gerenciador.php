@@ -31,7 +31,7 @@ $lstGuit = $bllGuit->Select();
                 <span class="material-symbols-outlined">
                     search
                 </span>
-                <a class="material-symbols-outlined home_icon" href="./home.php">
+                <a class="material-symbols-outlined home_icon" href="../home.php">
                     home
                 </a>
             </div>
@@ -59,10 +59,16 @@ $lstGuit = $bllGuit->Select();
                     <td><?php echo $guit->getNumCordas(); ?></td>
                     <td><?php echo $guit->getCor(); ?></td>
                     <td>
-                        <span class="material-symbols-outlined delete" onclick="JavaScript: remover( <?php echo $guit->getId(); ?> )">
+                        <span 
+                            class="material-symbols-outlined delete" 
+                            onclick="JavaScript: remover( <?php echo $guit->getId(); ?> )"
+                        >
                             delete 
                         </span>
-                        <span class="material-symbols-outlined edit">
+                        <span 
+                            class="material-symbols-outlined edit"
+                            onclick="JavaScript:location.href='cadastro.php?id=' + '<?php echo $guit->getId(); ?>'"
+                        >
                             edit
                         </span>
                     </td>

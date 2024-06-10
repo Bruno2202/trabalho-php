@@ -1,0 +1,128 @@
+:root {
+    --background-color: #FFFFFF;
+    --primary-color: #fa2d56;
+    --primary-dark: #B02D56;
+    --secondary-color: #fff2f2;
+    --tertiary-color: #8c8c8c;
+    --quaternary-color: #174EA6;
+    --text-color1: #000000;
+    --text-color2: #FFFFFF;
+    --save-color: #1FDF64;
+}
+ 
+.material-symbols-outlined {
+  color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.container {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--text-color2);
+    background-color: var(--primary-color);
+    width: 100vw;
+    padding: 12px  12%;
+}
+
+.app_name {
+    font-family: 'LS_bold';
+    font-size: 1.4rem;
+}
+
+.navigation {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+    
+.nav_option {
+    cursor: pointer;
+    height: 100%;
+    padding: 16px;
+    padding: 12px 20px;
+    transition: all ease-in-out 0.2s;
+    height: 100%;
+}
+
+.nav_option:hover {
+    background-color: var(--primary-dark);
+}
+
+.nav_icons {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    margin: 20px 12px;
+    width: 100%;
+}
+
+.input_field > label {
+    margin-bottom: 4px;
+    color: var(--text-color1);
+    font-family: 'LS_bold';
+}
+
+.input {
+    background-color: var(--secondary-color);
+    outline: none;
+    cursor: pointer;
+    border-color: var(--tertiary-color);
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 8px 12px;
+    width: 40%;
+}
+
+.save {
+    margin-top: 8px;
+    font-family: 'LS_medium';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--save-color);
+    outline: none;
+    border: none;
+    padding: 8px 20px;
+    color: var(--text-color2);
+    gap: 12px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+}
