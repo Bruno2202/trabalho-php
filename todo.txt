@@ -2,18 +2,18 @@
 
 - Ter 4 CRUDS de tabelas básicas, MVC manual ou sem MVC, não usa framewoks já prontos (trio)
 
-- Framework CSS: Bootstrap/Materialize/Bulma, etc...
+- Framework CSS: Bootstrap/Materialize/Bulma, etc... ✅
 
-- Movimentação de Dados (ex: atualização de estoque)
+- Movimentação de Dados (ex: atualização de estoque) 
 
 - Validação de Campos em 3 formulários (inserir)
 
 - Pagina Principal/Menu
 
-- Controle de Acesso e autenticação (login/senha)
+- Controle de Acesso e autenticação (login/senha) ✅
 
-- Passagem de valores entre páginas (GET/POST)
+- Passagem de valores entre páginas (GET/POST) ✅
 
-- Armazenar e usar GitHub - 0,5 se somente colocar a versão final
+- Armazenar e usar GitHub - 0,5 se somente colocar a versão final ✅
 
-- Outros (usar imagens, outros controles ou até ferramentas como o Trello na gestão)
+- Outros (usar imagens, outros controles ou até ferramentas como o Trello na gestão) ✅

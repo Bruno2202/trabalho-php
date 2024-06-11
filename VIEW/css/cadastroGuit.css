@@ -83,6 +83,12 @@
     justify-content: center;
 }
 
+.form_inputs {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
 .input_field {
     display: flex;
     align-items: center;
@@ -107,7 +113,7 @@
     border-style: solid;
     border-width: 2px;
     padding: 8px 12px;
-    width: 40%;
+    width: 100%;
 }
 
 .save {

@@ -23,10 +23,10 @@
         <header class="header">
             <h1 class="app_name">SOUNDS</h1>
             <nav class="navigation">
-                <a class="nav_option">VIOLINOS</a>
-                <a class="nav_option">GUITARRAS</a>
-                <a class="nav_option">PIANOS</a>
-                <a class="nav_option">BATERIAS</a>
+                <a class="nav_option">SOBRE NÓS</a>
+                <a class="nav_option">CONTATO</a>
+                <a class="nav_option">PRODUTOS</a>
+                <a class="nav_option" href="https://github.com/Bruno2202/trabalho-php">MAIS</a>
             </nav>
             <div class="nav_icons">
                 <a href="./LOGIN/login.php" class="material-symbols-outlined">
@@ -41,13 +41,13 @@
         <div id="carouselExample" class="carousel slide" style="width: 100vw;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../ASSETS/IMG/C3.png" class="d-block w-100" alt="C3">
+                    <img src="../ASSETS/IMG/carrosel/C4.png" class="d-block w-100" alt="C3">
                 </div>
                 <div class="carousel-item">
-                    <img src="../ASSETS/IMG/C2.png" class="d-block w-100" alt="C2">
+                    <img src="../ASSETS/IMG/carrosel/C5.png" class="d-block w-100" alt="C2">
                 </div>
                 <div class="carousel-item">
-                    <img src="../ASSETS/IMG/C1.png" class="d-block w-100" alt="C1">
+                    <img src="../ASSETS/IMG/carrosel/C6.png" class="d-block w-100" alt="C1">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

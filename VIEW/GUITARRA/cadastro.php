@@ -37,45 +37,43 @@ $guitarra = $bllGuit->SelectByID($id);
         </header>
 
         <form class="form" action="edit.php" method="POST">
-            <div class="input_field">
-                <label for="id">ID</label>
-                <input class="input" placeholder="ID" id="id" name="id" type="text" value="<?php echo $guitarra->getID(); ?>" readonly> 
-            </div>
+            <div class="form_inputs">
+                <div class="input_field">
+                    <label for="id">ID</label>
+                    <input class="input" placeholder="ID" id="id" name="id" type="text" value="<?php echo $guitarra->getID(); ?>" readonly>
+                </div>
 
-            <div class="input_field">
-                <label for="descricao">DESCRICÃO</label>
-                <input class="input" placeholder="Descrição" id="descricao" name="descricao" type="text" value="<?php echo $guitarra->getDescricao(); ?>">
-            </div>
+                <div class="input_field">
+                    <label for="descricao">DESCRICÃO</label>
+                    <input class="input" placeholder="Descrição" id="descricao" name="descricao" type="text" value="<?php echo $guitarra->getDescricao(); ?>">
+                </div>
 
-            <div class="input_field">
-                <label for="modelo">MODELO</label>
-                <input class="input" placeholder="Modelo" id="modelo" name="modelo" type="text" value="<?php echo $guitarra->getModelo(); ?>">
-            </div>
+                <div class="input_field">
+                    <label for="modelo">MODELO</label>
+                    <input class="input" placeholder="Modelo" id="modelo" name="modelo" type="text" value="<?php echo $guitarra->getModelo(); ?>">
+                </div>
 
-            <div class="input_field">
-                <label for="marca">MARCA</label>
-                <input class="input" placeholder="Marca" id="marca" name="marca" type="text" value="<?php echo $guitarra->getMarca(); ?>">
-            </div>
+                <div class="input_field">
+                    <label for="marca">MARCA</label>
+                    <input class="input" placeholder="Marca" id="marca" name="marca" type="text" value="<?php echo $guitarra->getMarca(); ?>">
+                </div>
 
-            <div class="input_field">
-                <label for="ano">ANO</label>
-                <input class="input" placeholder="Ano" id="ano" name="ano" type="text" value="<?php echo $guitarra->getAno(); ?>">
-            </div>
+                <div class="input_field">
+                    <label for="ano">ANO</label>
+                    <input class="input" placeholder="Ano" id="ano" name="ano" type="text" value="<?php echo $guitarra->getAno(); ?>">
+                </div>
 
-            <div class="input_field">
-                <label for="numCordas">N° CORDAS</label>
-                <input class="input" placeholder="N° Cordas" id="numCordas" name="numCordas" type="text" value="<?php echo $guitarra->getNumCordas(); ?>">
-            </div>
+                <div class="input_field">
+                    <label for="numCordas">N° CORDAS</label>
+                    <input class="input" placeholder="N° Cordas" id="numCordas" name="numCordas" type="text" value="<?php echo $guitarra->getNumCordas(); ?>">
+                </div>
 
-            <div class="input_field">
-                <label for="cor">COR</label>
-                <input class="input" placeholder="Cor" id="cor" name="cor" type="text" value="<?php echo $guitarra->getCor(); ?>">
+                <div class="input_field">
+                    <label for="cor">COR</label>
+                    <input class="input" placeholder="Cor" id="cor" name="cor" type="text" value="<?php echo $guitarra->getCor(); ?>">
+                </div>
             </div>
-
             <button class="save" type="submit">
-                <span class="material-symbols-outlined">
-                    save
-                </span>
                 Salvar
             </button>
         </form>

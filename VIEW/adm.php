@@ -16,9 +16,6 @@
         <header class="header">
             <h1 class="app_name">SOUNDS | ADM</h1>
             <div class="nav_icons">
-                <span class="material-symbols-outlined">
-                    search
-                </span>
                 <a class="material-symbols-outlined home_icon" href="./home.php">
                     home
                 </a>
