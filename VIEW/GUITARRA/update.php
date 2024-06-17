@@ -16,6 +16,5 @@
     $bllGuit = new \BLL\Guitarra(); 
     $result =  $bllGuit->Update($guitarra);  
 
-  
     header("location: gerenciador.php");
 ?>

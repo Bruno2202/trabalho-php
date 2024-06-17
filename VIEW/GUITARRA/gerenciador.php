@@ -26,7 +26,7 @@ $lstGuit = $bllGuit->Select();
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="app_name">SOUNDS | GUITARRAS</h1>
+            <a class="app_name" href="../adm.php">SOUNDS | GUITARRAS</a>
             <div class="nav_icons">
                 <span class="material-symbols-outlined">
                     search
@@ -67,7 +67,7 @@ $lstGuit = $bllGuit->Select();
                         </span>
                         <span 
                             class="material-symbols-outlined edit"
-                            onclick="JavaScript:location.href='cadastro.php?id=' + '<?php echo $guit->getId(); ?>'"
+                            onclick="JavaScript:location.href='editar.php?id=' + '<?php echo $guit->getId(); ?>'"
                         >
                             edit
                         </span>

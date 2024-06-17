@@ -31,4 +31,10 @@ class Guitarra
         $dalGuit = new \DAL\Guitarra();
         return $dalGuit->Delete($id);
     }
+
+    public function Create(\MODEL\Guitarra $guitarra) {
+        $dalGuit = new \DAL\Guitarra();   
+        
+        return $dalGuit->Create($guitarra);
+    }
 }

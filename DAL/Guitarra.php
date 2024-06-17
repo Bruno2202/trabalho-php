@@ -75,4 +75,16 @@ class Guitarra
 
         return $result;
     }
+        
+    public function Create(\MODEL\Guitarra $guitarra)
+    {
+        $sql = "INSERT INTO guitarra (DESCRICAO, MODELO, MARCA, ANO, NUM_CORDAS, COR, QTDE_ESTOQUE, VLR_VENDA) 
+        VALUES ('{$guitarra->getDescricao()}','{$guitarra->getModelo()}','{$guitarra->getMarca()}','{$guitarra->getAno()}','{$guitarra->getNumCordas()}','{$guitarra->getCor()}','{$guitarra->getQtdeEstoque()}','{$guitarra->getVlrVenda()}');";
+        
+        $con = Conexao::conectar();
+        $result = $con->query($sql);
+        $con = Conexao::desconectar();
+
+        return $result; 
+    }
 }
