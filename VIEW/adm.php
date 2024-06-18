@@ -34,41 +34,41 @@
                 </span>
                 Gerenciador de Guitarras
             </a>
-            <a class="block" href="">
+            <a class="block" href="./PIANO/cadastro.php">
                 <span class="material-symbols-outlined">
                     app_registration
                 </span>
                 Cadastro de Pianos
             </a>
-            <a class="block" href="">
-                <span class="material-symbols-outlined">
-                    app_registration
-                </span>
-                Cadastro de Violinos
-            </a>
-            <a class="block" href="">
-                <span class="material-symbols-outlined">
-                    app_registration
-                </span>
-                Cadastro de Batrerias
-            </a>
-            <a class="block" href="">
-                <span class="material-symbols-outlined">
-                    inventory
-                </span>
-                Gerenciador de Baterias
-            </a>
-            <a class="block" href="">
+            <a class="block" href="./PIANO/gerenciador.php">
                 <span class="material-symbols-outlined">
                     inventory
                 </span>
                 Gerenciador de Pianos
             </a>
-            <a class="block" href="">
+            <a class="block" href="./VIOLINO/cadastro.php">
+                <span class="material-symbols-outlined">
+                    app_registration
+                </span>
+                Cadastro de Violinos
+            </a>
+            <a class="block" href="./VIOLINO/gerenciador.php">
                 <span class="material-symbols-outlined">
                     inventory
                 </span>
                 Gerenciador de Violinos
+            </a>
+            <a class="block" href="./BATERIA/cadastro.php">
+                <span class="material-symbols-outlined">
+                    app_registration
+                </span>
+                Cadastro de Batrerias
+            </a>
+            <a class="block" href="./BATERIA/gerenciador.php">
+                <span class="material-symbols-outlined">
+                    inventory
+                </span>
+                Gerenciador de Baterias
             </a>
         </section>
     </div>

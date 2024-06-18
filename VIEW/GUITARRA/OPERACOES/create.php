@@ -1,6 +1,6 @@
 <?php
-	include_once __DIR__ . '../../../MODEL/Guitarra.php'; 
-	include_once __DIR__ . '../../../BLL/Guitarra.php';
+	include_once __DIR__ . '../../../../MODEL/Guitarra.php'; 
+	include_once __DIR__ . '../../../../BLL/Guitarra.php';
 
 	$guit = new \MODEL\Guitarra();
 
@@ -18,7 +18,7 @@
 	$result = $bllGuit->Create($guit);
 
 	if ($result->errorCode() === '00000') {
-		header("location: gerenciador.php");
+		header("location: ../gerenciador.php");
 	}
 	else echo $result->errorInfo();
 ?>

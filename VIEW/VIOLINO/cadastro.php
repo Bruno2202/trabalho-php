@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/cadastro.css">
-    <title>Cadastro de Guitarras</title>
+    <title>Cadastro de Violinos</title>
 </head>
 
 <body>
     <div class="container">
 
         <header class="header">
-            <a class="app_name" href="../adm.php">SOUNDS | GUITARRAS</a>
+            <a class="app_name" href="../adm.php">SOUNDS | VIOLINOS</a>
             <div class="nav_icons">
                 <span class="material-symbols-outlined">
                     search
@@ -48,11 +48,6 @@
                 </div>
             </div>
             <div class="form_inputs">
-                <div class="input_field">
-                    <label for="numCordas">N° CORDAS</label>
-                    <input class="input" placeholder="N° Cordas" id="numCordas" name="numCordas" type="text" require>
-                </div>
-
                 <div class="input_field">
                     <label for="cor">COR</label>
                     <input class="input" placeholder="Cor" id="cor" name="cor" type="text" require>

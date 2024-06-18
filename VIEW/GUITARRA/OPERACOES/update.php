@@ -1,7 +1,7 @@
 <?php 
     namespace VIEW\Guitarra;
-    include_once __DIR__ . '../../../MODEL/Guitarra.php'; 
-    include_once __DIR__ . '../../../BLL/Guitarra.php'; 
+    include_once __DIR__ . '../../../../MODEL/Guitarra.php'; 
+    include_once __DIR__ . '../../../../BLL/Guitarra.php'; 
 
     $guitarra = new \MODEL\Guitarra();
 
@@ -16,5 +16,5 @@
     $bllGuit = new \BLL\Guitarra(); 
     $result =  $bllGuit->Update($guitarra);  
 
-    header("location: gerenciador.php");
+    header("location: ../gerenciador.php");
 ?>
