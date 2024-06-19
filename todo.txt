@@ -1,14 +1,14 @@
 ==== REQUISITOS ====
 
-- Ter 4 CRUDS de tabelas básicas, MVC manual ou sem MVC, não usa framewoks já prontos (trio)
+- Ter 4 CRUDS de tabelas básicas, MVC manual ou sem MVC, não usa framewoks já prontos (trio) ✅
 
 - Framework CSS: Bootstrap/Materialize/Bulma, etc... ✅
 
 - Movimentação de Dados (ex: atualização de estoque) 
 
-- Validação de Campos em 3 formulários (inserir)
+- Validação de Campos em 3 formulários (inserir) 
 
-- Pagina Principal/Menu
+- Pagina Principal/Menu 
 
 - Controle de Acesso e autenticação (login/senha) ✅
 

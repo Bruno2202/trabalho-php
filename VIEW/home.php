@@ -64,7 +64,7 @@
             <h1 class="title">PRODUTOS</h1>
             <separator class="separator"></separator>
             <section class="blocks">
-                <a href="">
+                <a href="./GUITARRA/guitarra.php">
                     <img href="./GUITARRA" src="../ASSETS/IMG/block/gBlock.png" alt="Guitarras">
                 </a>
                 <a href="">

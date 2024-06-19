@@ -1,7 +1,7 @@
 <?php 
-  namespace MODEL; 
+  	namespace MODEL; 
 
-  class Guitarra{
+  	class Guitarra{
         private ?int $id; 
         private ?string $descricao; 
         private ?string $modelo; 
@@ -11,6 +11,11 @@
         private ?string $cor; 
         private ?int $qtdeEstoque; 
         private ?float $vlrVenda; 
+
+        ///
+        private ?string $imagem; 
+        private ?string $tipoImagem; 
+        ///
 
         public function __construct() { }
 
@@ -24,6 +29,11 @@
         public function getQtdeEstoque() { return $this->qtdeEstoque; }
         public function getVlrVenda() { return $this->vlrVenda; }
 
+        ///
+        public function getImagem() { return $this->imagem; }
+        public function getTipoImagem() { return $this->tipoImagem; }
+        ///
+
         public function setId(int $id) { $this->id = $id; }
         public function setDescricao(string $descricao) { $this->descricao = $descricao; }
         public function setModelo(string $modelo) { $this->modelo = $modelo; }
@@ -33,5 +43,10 @@
         public function setCor(string $cor) { $this->cor = $cor; }
         public function setQtdeEstoque(int $qtdeEstoque) { $this->qtdeEstoque = $qtdeEstoque; }
         public function setVlrVenda(float $vlrVenda) { $this->vlrVenda = $vlrVenda; }
-    }
+
+        ///
+        public function setImagem(string $imagem) { $this->imagem = $imagem; }
+        public function setTipoImagem(string $tipoImagem) { $this->tipoImagem = $tipoImagem; }
+        ///
+  	}
 ?>

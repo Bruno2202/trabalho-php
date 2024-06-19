@@ -1,0 +1,84 @@
+.searchIcon {
+    cursor: pointer;
+}
+
+.closeSearchIcon {
+    cursor: pointer;
+    font-size: 36px;
+    margin: 40px;
+}
+
+.modalOverlay {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    background-color: #0000008e;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.searchBar {
+    width: 50%;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    border-radius: 200px;
+}
+
+.header {
+    position: absolute;
+    z-index: 999;
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: var(--text-color2);
+    background-color: #ffffff55;
+    width: 100vw;
+    padding: 0px 16%;
+}
+
+.app_name {
+    font-family: 'LS_bold';
+    font-size: 1.4rem;
+}
+
+.navigation {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.nav_option {
+    cursor: pointer;
+    height: 100%;
+    padding: 16px;
+    padding: 12px 20px;
+    transition: all ease-in-out 0.2s;
+    height: 100%;
+}
+
+.nav_option:hover {
+    background-color: var(--primary-dark);
+}
+
+.nav_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
