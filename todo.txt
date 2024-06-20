@@ -8,7 +8,7 @@
 
 - Validação de Campos em 3 formulários (inserir) 
 
-- Pagina Principal/Menu 
+- Pagina Principal/Menu ✅
 
 - Controle de Acesso e autenticação (login/senha) ✅
 

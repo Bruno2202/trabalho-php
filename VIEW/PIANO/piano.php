@@ -46,20 +46,21 @@ $lstPiano = $bllPiano->Select();
         <div id="carouselExample" class="carousel slide" style="width: 100vw;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../../ASSETS/IMG/carrosel/guitarra.png" class="d-block w-100" alt="C3">
+                    <img src="../../ASSETS/IMG/carrosel/piano.png" class="d-block w-100" alt="C3">
                 </div>
             </div>
         </div>
 
         <div class="disclaimer">
-            <h1 class="disclaimer_title">Versatilidade eletrizante</h1>
-            <p class="disclaimer_phrase">com a guitarra, liberte seu talento, inspire multidões e conquiste palcos com acordes inesquecíveis.</p>
+            <h1 class="disclaimer_title">Harmonia envolvente</h1>
+            <p class="disclaimer_phrase">com o piano, crie melodias cativantes e emocione multidões com sua música encantadora e inspiradora.</p>
         </div>
 
         <div class="instruments">
+        <div class="instruments">
             <?php foreach ($lstPiano as $piano) { ?>
                 <div class="instruments_card" id="<?php echo $piano->getID(); ?>">
-                    <?php echo '<img class="instrument_img" src="data: ' . $piano->getTipoImagem() . ';base64,' . base64_encode($piano->getImagem()) . '"/>'; ?>
+                    <?php echo '<img class="instrument_img" src="data:' . $piano->getTipoImagem() . ';base64,' . base64_encode($piano->getImagem()) . '"/>'; ?>
                     <h3 class="instrument_desc"><?php echo $piano->getDescricao(); ?></h3> 
                     <p class="instrument_value">R$ <?php echo $piano->getVlrVenda(); ?></p> 
                 </div>

@@ -46,7 +46,7 @@ $lstBateria = $bllBateria->Select();
         <div id="carouselExample" class="carousel slide" style="width: 100vw;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../../ASSETS/IMG/carrosel/guitarra.png" class="d-block w-100" alt="C3">
+                    <img src="../../ASSETS/IMG/carrosel/bateria.png" class="d-block w-100" alt="C3">
                 </div>
             </div>
         </div>

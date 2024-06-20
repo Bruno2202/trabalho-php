@@ -46,7 +46,7 @@ $lstViolino = $bllViolino->Select();
         <div id="carouselExample" class="carousel slide" style="width: 100vw;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../../ASSETS/IMG/carrosel/guitarra.png" class="d-block w-100" alt="C3">
+                    <img src="../../ASSETS/IMG/carrosel/violino.png" class="d-block w-100" alt="C3">
                 </div>
             </div>
         </div>
@@ -57,13 +57,15 @@ $lstViolino = $bllViolino->Select();
         </div>
 
         <div class="instruments">
-            <?php foreach ($lstViolino as $Violino) { ?>
-                <div class="instruments_card" id="<?php echo $Violino->getID(); ?>">
-                    <?php echo '<img class="instrument_img" src="data: ' . $Violino->getTipoImagem() . ';base64,' . base64_encode($Violino->getImagem()) . '"/>'; ?>
-                    <h3 class="instrument_desc"><?php echo $Violino->getDescricao(); ?></h3> 
-                    <p class="instrument_value">R$ <?php echo $Violino->getVlrVenda(); ?></p> 
+            <?php foreach ($lstViolino as $violino) { 
+                if ($violino->getQtdeEstoque() > 0 ) {
+            ?>
+                <div class="instruments_card" id="<?php echo $violino->getID(); ?>">
+                    <?php echo '<img class="instrument_img" src="data: ' . $violino->getTipoImagem() . ';base64,' . base64_encode($violino->getImagem()) . '"/>'; ?>
+                    <h3 class="instrument_desc"><?php echo $violino->getDescricao(); ?></h3>
+                    <p class="instrument_value">R$ <?php echo $violino->getVlrVenda(); ?></p>
                 </div>
-            <?php } ?>
+            <?php }} ?>
         </div>
     </div>
 </body>

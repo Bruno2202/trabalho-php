@@ -51,13 +51,12 @@
 
 .instruments {
     margin-bottom: 120px;
-    width: auto;
-    overflow-x: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
+    display: grid;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr); /* Limita a 3 colunas */
+    grid-gap: 20px;
 }
 
 .instruments_card {
@@ -80,6 +79,7 @@
 
 .instrument_desc {
     width: 100%;
+    word-break: break-all;
     color: var(--text-color1);
     font-family: 'LS_medium';
 }
