@@ -64,11 +64,40 @@ class Guitarra
 
     public function Update(\MODEL\Guitarra $guit)
     {
-        $sql = "UPDATE guitarra SET DESCRICAO = ?, MODELO = ?, MARCA = ?, ANO = ?, NUM_CORDAS = ?, COR = ?, QTDE_ESTOQUE = ?, VLR_VENDA = ?, IMAGEM = ?, TIPO_IMAGEM = ?  WHERE ID_GUITARRA = ?;";
-
         $con = Conexao::conectar();
-        $query = $con->prepare($sql);
-        $result = $query->execute(array($guit->getDescricao(), $guit->getModelo(), $guit->getMarca(), $guit->getAno(), $guit->getNumCordas(), $guit->getCor(), $guit->getQtdeEstoque(), $guit->getVlrVenda(), $guit->getImagem(), $guit->getTipoImagem(), $guit->getID()));
+
+        $sql = "UPDATE guitarra 
+                SET DESCRICAO = ?, MODELO = ?, MARCA = ?, ANO = ?, NUM_CORDAS = ?, COR = ?, QTDE_ESTOQUE = ?, VLR_VENDA = ?, IMAGEM = ?, TIPO_IMAGEM = ?  
+                WHERE ID_GUITARRA = ?;";
+
+        $stmt = $con->prepare($sql);
+
+        $descricao = $guit->getDescricao();
+        $modelo = $guit->getModelo();
+        $marca = $guit->getMarca();
+        $ano = $guit->getAno();
+        $numCordas = $guit->getNumCordas();
+        $cor = $guit->getCor();
+        $qtdeEstoque = $guit->getQtdeEstoque();
+        $vlrVenda = $guit->getVlrVenda();
+        $imagem = $guit->getImagem();
+        $tipoImagem = $guit->getTipoImagem();
+        $id = $guit->getID();
+
+        $stmt->bindParam(1, $descricao, PDO::PARAM_STR);
+        $stmt->bindParam(2, $modelo, PDO::PARAM_STR);
+        $stmt->bindParam(3, $marca, PDO::PARAM_STR);
+        $stmt->bindParam(4, $ano, PDO::PARAM_INT);
+        $stmt->bindParam(5, $numCordas, PDO::PARAM_INT);
+        $stmt->bindParam(6, $cor, PDO::PARAM_STR);
+        $stmt->bindParam(7, $qtdeEstoque, PDO::PARAM_INT);
+        $stmt->bindParam(8, $vlrVenda, PDO::PARAM_STR);
+        $stmt->bindParam(9, $imagem, PDO::PARAM_LOB);
+        $stmt->bindParam(10, $tipoImagem, PDO::PARAM_STR);
+        $stmt->bindParam(11, $id, PDO::PARAM_INT);
+
+        $result = $stmt->execute();
+
         $con = Conexao::desconectar();
 
         return $result;
@@ -86,25 +115,25 @@ class Guitarra
         return $result;
     }
         
-    public function Create(\MODEL\Guitarra $guitarra)
+    public function Create(\MODEL\Guitarra $guit)
     {
         $sql = "INSERT INTO guitarra (DESCRICAO, MODELO, MARCA, ANO, NUM_CORDAS, COR, QTDE_ESTOQUE, VLR_VENDA, IMAGEM, TIPO_IMAGEM) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         $con = Conexao::conectar();
         
         $stmt = $con->prepare($sql);
         
-        $stmt->bindParam(1, $guitarra->getDescricao(), PDO::PARAM_STR);
-        $stmt->bindParam(2, $guitarra->getModelo(), PDO::PARAM_STR);
-        $stmt->bindParam(3, $guitarra->getMarca(), PDO::PARAM_STR);
-        $stmt->bindParam(4, $guitarra->getAno(), PDO::PARAM_INT);
-        $stmt->bindParam(5, $guitarra->getNumCordas(), PDO::PARAM_INT);
-        $stmt->bindParam(6, $guitarra->getCor(), PDO::PARAM_STR);
-        $stmt->bindParam(7, $guitarra->getQtdeEstoque(), PDO::PARAM_INT);
-        $stmt->bindParam(8, $guitarra->getVlrVenda(), PDO::PARAM_STR);
-        $stmt->bindParam(9, $guitarra->getImagem(), PDO::PARAM_LOB);
-        $stmt->bindParam(10, $guitarra->getTipoImagem(), PDO::PARAM_STR);
+        $stmt->bindParam(1, $guit->getDescricao(), PDO::PARAM_STR);
+        $stmt->bindParam(2, $guit->getModelo(), PDO::PARAM_STR);
+        $stmt->bindParam(3, $guit->getMarca(), PDO::PARAM_STR);
+        $stmt->bindParam(4, $guit->getAno(), PDO::PARAM_INT);
+        $stmt->bindParam(5, $guit->getNumCordas(), PDO::PARAM_INT);
+        $stmt->bindParam(6, $guit->getCor(), PDO::PARAM_STR);
+        $stmt->bindParam(7, $guit->getQtdeEstoque(), PDO::PARAM_INT);
+        $stmt->bindParam(8, $guit->getVlrVenda(), PDO::PARAM_STR);
+        $stmt->bindParam(9, $guit->getImagem(), PDO::PARAM_LOB);
+        $stmt->bindParam(10, $guit->getTipoImagem(), PDO::PARAM_STR);
 
         $stmt->execute();
 

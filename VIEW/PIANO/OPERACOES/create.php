@@ -13,8 +13,13 @@
     $piano->setQtdeEstoque($_POST['qtdeEstoque']);
     $piano->setVlrVenda($_POST['vlrVenda']);
 
+	$imagemTipo = $_FILES['imagem']['type'];
+	$imagemConteudo = file_get_contents($_FILES['imagem']['tmp_name']);
+
+	$piano->setImagem($imagemConteudo);
+	$piano->setTipoImagem($imagemTipo);
+
 	$bllPiano = new \BLL\Piano(); 
-	
 	$result = $bllPiano->Create($piano);
 
 	if ($result->errorCode() === '00000') {

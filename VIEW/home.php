@@ -67,22 +67,21 @@
                 <a href="./GUITARRA/guitarra.php">
                     <img href="./GUITARRA" src="../ASSETS/IMG/block/gBlock.png" alt="Guitarras">
                 </a>
-                <a href="">
+                <a href="./VIOLINO/violino.php">
                     <img src="../ASSETS/IMG/block/vBlock.png" alt="Violinos">
                 </a>
-                <a href="">
+                <a href="./PIANO/piano.php">
                     <img src="../ASSETS/IMG/block/pBlock.png" alt="Pianos">
                 </a>
-                <a href="">
+                <a href="./BATERIA/bateria.php">
                     <img src="../ASSETS/IMG/block/bBlock.png" alt="Baterias">
                 </a>
             </section>
-            <div>
-            </div>
+        <div>
+    </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-            </script>
-            <script src="./js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./js/search.js"></script>
 </body>
 
 </html>

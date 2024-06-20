@@ -1,10 +1,8 @@
 <?php
-
 	include_once __DIR__ . '../../../../MODEL/Guitarra.php'; 
 	include_once __DIR__ . '../../../../BLL/Guitarra.php';
 
 	$guit = new \MODEL\Guitarra();
-
 	
     $guit->setDescricao($_POST['descricao']);
     $guit->setModelo($_POST['modelo']);
@@ -15,7 +13,6 @@
     $guit->setQtdeEstoque($_POST['qtdeEstoque']);
     $guit->setVlrVenda($_POST['vlrVenda']);
 
-	// Processamento da imagem
 	$imagemTipo = $_FILES['imagem']['type'];
 	$imagemConteudo = file_get_contents($_FILES['imagem']['tmp_name']);
 
@@ -23,7 +20,6 @@
 	$guit->setTipoImagem($imagemTipo);
 
 	$bllGuit = new \BLL\Guitarra(); 
-
 	$result = $bllGuit->Create($guit);
 
 	if ($result->errorCode() === '00000') {

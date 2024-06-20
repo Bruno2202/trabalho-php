@@ -12,8 +12,13 @@
     $violino->setQtdeEstoque($_POST['qtdeEstoque']);
     $violino->setVlrVenda($_POST['vlrVenda']);
 
+	$imagemTipo = $_FILES['imagem']['type'];
+	$imagemConteudo = file_get_contents($_FILES['imagem']['tmp_name']);
+
+	$violino->setImagem($imagemConteudo);
+	$violino->setTipoImagem($imagemTipo);
+
 	$bllViolino = new \BLL\Violino(); 
-	
 	$result = $bllViolino->Create($violino);
 
 	if ($result->errorCode() === '00000') {

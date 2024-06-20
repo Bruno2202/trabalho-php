@@ -13,12 +13,18 @@
     $bateria->setQtdeEstoque($_POST['qtdeEstoque']);
     $bateria->setVlrVenda($_POST['vlrVenda']);
 
-	$bllBateria = new \BLL\Bateria(); 
+	$imagemTipo = $_FILES['imagem']['type'];
+	$imagemConteudo = file_get_contents($_FILES['imagem']['tmp_name']);
 	
+	$bateria->setImagem($imagemConteudo);
+	$bateria->setTipoImagem($imagemTipo);
+	
+	$bllBateria = new \BLL\Bateria(); 
 	$result = $bllBateria->Create($bateria);
-
+	
 	if ($result->errorCode() === '00000') {
 		header("location: ../gerenciador.php");
 	}
+	
 	else echo $result->errorInfo();
 ?>

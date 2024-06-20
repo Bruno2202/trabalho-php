@@ -1,11 +1,11 @@
 <?php
 
-include_once __DIR__ . '../../../BLL/Guitarra.php';
+include_once __DIR__ . '../../../BLL/Bateria.php';
 
-use BLL\Guitarra;
+use BLL\Bateria;
 
-$bllGuit = new \BLL\Guitarra();
-$lstGuit = $bllGuit->Select();
+$bllBateria = new \BLL\Bateria();
+$lstBateria = $bllBateria->Select();
 
 ?>
 
@@ -20,7 +20,7 @@ $lstGuit = $bllGuit->Select();
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/instrumentos.css">
     <link rel="stylesheet" href="../css/header.css">
-    <title>Guitarra</title>
+    <title>Bateria</title>
 </head>
 
 <body>
@@ -52,16 +52,16 @@ $lstGuit = $bllGuit->Select();
         </div>
 
         <div class="disclaimer">
-            <h1 class="disclaimer_title">Versatilidade eletrizante</h1>
-            <p class="disclaimer_phrase">com a guitarra, liberte seu talento, inspire multidões e conquiste palcos com acordes inesquecíveis.</p>
+            <h1 class="disclaimer_title">Ritmo contagiante</h1>
+            <p class="disclaimer_phrase">com a bateria, transforme sua música e energize multidões com batidas envolventes e poderosas performances.</p>
         </div>
 
         <div class="instruments">
-            <?php foreach ($lstGuit as $guit) { ?>
-                <div class="instruments_card" id="<?php echo $guit->getID(); ?>">
-                    <?php echo '<img class="instrument_img" src="data: ' . $guit->getTipoImagem() . ';base64,' . base64_encode($guit->getImagem()) . '"/>'; ?>
-                    <h3 class="instrument_desc"><?php echo $guit->getDescricao(); ?></h3> 
-                    <p class="instrument_value">R$ <?php echo $guit->getVlrVenda(); ?></p> 
+            <?php foreach ($lstBateria as $bateria) { ?>
+                <div class="instruments_card" id="<?php echo $bateria->getID(); ?>">
+                    <?php echo '<img class="instrument_img" src="data: ' . $bateria->getTipoImagem() . ';base64,' . base64_encode($bateria->getImagem()) . '"/>'; ?>
+                    <h3 class="instrument_desc"><?php echo $bateria->getDescricao(); ?></h3> 
+                    <p class="instrument_value">R$ <?php echo $bateria->getVlrVenda(); ?></p> 
                 </div>
             <?php } ?>
         </div>

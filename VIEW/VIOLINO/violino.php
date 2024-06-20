@@ -1,11 +1,11 @@
 <?php
 
-include_once __DIR__ . '../../../BLL/Guitarra.php';
+include_once __DIR__ . '../../../BLL/Violino.php';
 
-use BLL\Guitarra;
+use BLL\Violio;
 
-$bllGuit = new \BLL\Guitarra();
-$lstGuit = $bllGuit->Select();
+$bllViolino = new \BLL\Violino();
+$lstViolino = $bllViolino->Select();
 
 ?>
 
@@ -20,7 +20,7 @@ $lstGuit = $bllGuit->Select();
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/instrumentos.css">
     <link rel="stylesheet" href="../css/header.css">
-    <title>Guitarra</title>
+    <title>Violino</title>
 </head>
 
 <body>
@@ -52,16 +52,16 @@ $lstGuit = $bllGuit->Select();
         </div>
 
         <div class="disclaimer">
-            <h1 class="disclaimer_title">Versatilidade eletrizante</h1>
-            <p class="disclaimer_phrase">com a guitarra, liberte seu talento, inspire multidões e conquiste palcos com acordes inesquecíveis.</p>
+            <h1 class="disclaimer_title">Melodia vibrante</h1>
+            <p class="disclaimer_phrase">com o violino, transcenda fronteiras e encante corações com harmonias inesquecíveis e emocionantes performances musicais.</p>
         </div>
 
         <div class="instruments">
-            <?php foreach ($lstGuit as $guit) { ?>
-                <div class="instruments_card" id="<?php echo $guit->getID(); ?>">
-                    <?php echo '<img class="instrument_img" src="data: ' . $guit->getTipoImagem() . ';base64,' . base64_encode($guit->getImagem()) . '"/>'; ?>
-                    <h3 class="instrument_desc"><?php echo $guit->getDescricao(); ?></h3> 
-                    <p class="instrument_value">R$ <?php echo $guit->getVlrVenda(); ?></p> 
+            <?php foreach ($lstViolino as $Violino) { ?>
+                <div class="instruments_card" id="<?php echo $Violino->getID(); ?>">
+                    <?php echo '<img class="instrument_img" src="data: ' . $Violino->getTipoImagem() . ';base64,' . base64_encode($Violino->getImagem()) . '"/>'; ?>
+                    <h3 class="instrument_desc"><?php echo $Violino->getDescricao(); ?></h3> 
+                    <p class="instrument_value">R$ <?php echo $Violino->getVlrVenda(); ?></p> 
                 </div>
             <?php } ?>
         </div>

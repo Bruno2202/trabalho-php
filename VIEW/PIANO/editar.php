@@ -1,10 +1,12 @@
 <?php
+
 include_once __DIR__ . "../../../MODEL/Piano.php";
 include_once __DIR__ . "../../../BLL/Piano.php";
 $id = $_GET['id'];
 
 $bllPiano = new BLL\Piano();
 $piano = $bllPiano->SelectByID($id);
+
 ?>
 
 
@@ -36,7 +38,7 @@ $piano = $bllPiano->SelectByID($id);
             </div>
         </header>
 
-        <form class="form" action="./OPERACOES/update.php" method="POST">
+        <form class="form" action="./OPERACOES/update.php" method="POST" enctype="multipart/form-data">
             <div class="form_inputs">
                 <div class="input_field">
                     <label for="id">ID</label>
@@ -62,23 +64,44 @@ $piano = $bllPiano->SelectByID($id);
                     <label for="ano">ANO</label>
                     <input class="input" placeholder="Ano" id="ano" name="ano" type="text" value="<?php echo $piano->getAno(); ?>" require>
                 </div>
+            </div>
 
+            <div class="form_inputs">  
                 <div class="input_field">
                     <label for="numTeclas">N° TECLAS</label>
-                    <input class="input" placeholder="N° Cordas" id="numTeclas" name="numTeclas" type="text" value="<?php echo $piano->getNumTeclas(); ?>" require>
+                    <input class="input" placeholder="N° Teclas" id="numTeclas" name="numTeclas" type="text" value="<?php echo $piano->getNumTeclas(); ?>" require>
                 </div>
 
                 <div class="input_field">
                     <label for="cor">COR</label>
                     <input class="input" placeholder="Cor" id="cor" name="cor" type="text" value="<?php echo $piano->getCor(); ?>" require>
                 </div>
+
+                <div class="input_field">
+                    <label for="qtdeEstoque">QTDE ESTOQUE</label>
+                    <input class="input" placeholder="Quantidade em estoque" id="qtdeEstoque" name="qtdeEstoque" type="text" value="<?php echo $piano->getQtdeEstoque(); ?>" required>
+                </div>
+
+                <div class="input_field">
+                    <label for="vlrVenda">VALOR VENDA</label>
+                    <input class="input" placeholder="Valor de venda" id="vlrVenda" name="vlrVenda" type="text"  value="<?php echo $piano->getVlrVenda(); ?>" required>
+                </div>
+                <div class="input_field">
+                    <label for="imagem">IMAGEM:</label>
+                    <?php if ($piano->getImagem()): ?>
+                        <img src="data:<?php echo $piano->getTipoImagem(); ?>;base64,<?php echo base64_encode($piano->getImagem()); ?>" alt="Imagem da piano">
+                        <p>Imagem atual</p>
+                    <?php else: ?>
+                        <p>Nenhuma imagem selecionada</p>
+                    <?php endif; ?>
+                    <input type="file" name="imagem" id="imagem">
+                </div>
             </div>
             <button class="save" type="submit">
                 Salvar
             </button>
         </form>
-
-    </div>
+        
     </div>
 </body>
 

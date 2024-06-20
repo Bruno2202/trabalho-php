@@ -1,10 +1,12 @@
 <?php
+
 include_once __DIR__ . "../../../MODEL/Bateria.php";
 include_once __DIR__ . "../../../BLL/Bateria.php";
 $id = $_GET['id'];
 
 $bllBateria = new BLL\Bateria();
 $bateria = $bllBateria->SelectByID($id);
+
 ?>
 
 
@@ -36,7 +38,7 @@ $bateria = $bllBateria->SelectByID($id);
             </div>
         </header>
 
-        <form class="form" action="./OPERACOES/update.php" method="POST">
+        <form class="form" action="./OPERACOES/update.php" method="POST"  enctype="multipart/form-data">
             <div class="form_inputs">
                 <div class="input_field">
                     <label for="id">ID</label>
@@ -62,7 +64,9 @@ $bateria = $bllBateria->SelectByID($id);
                     <label for="ano">ANO</label>
                     <input class="input" placeholder="Ano" id="ano" name="ano" type="text" value="<?php echo $bateria->getAno(); ?>" require>
                 </div>
+            </div>
 
+            <div class="form_inputs">
                 <div class="input_field">
                     <label for="numPecas">N° PEÇAS</label>
                     <input class="input" placeholder="N° Pecas" id="numPecas" name="numPecas" type="text" value="<?php echo $bateria->getNumPecas(); ?>" require>
@@ -72,13 +76,33 @@ $bateria = $bllBateria->SelectByID($id);
                     <label for="cor">COR</label>
                     <input class="input" placeholder="Cor" id="cor" name="cor" type="text" value="<?php echo $bateria->getCor(); ?>" require>
                 </div>
+
+                <div class="input_field">
+                    <label for="qtdeEstoque">QTDE ESTOQUE</label>
+                    <input class="input" placeholder="Quantidade em estoque" id="qtdeEstoque" name="qtdeEstoque" type="text" value="<?php echo $bateria->getQtdeEstoque(); ?>" required>
+                </div>
+
+                <div class="input_field">
+                    <label for="vlrVenda">VALOR VENDA</label>
+                    <input class="input" placeholder="Valor de venda" id="vlrVenda" name="vlrVenda" type="text"  value="<?php echo $bateria->getVlrVenda(); ?>" required>
+                </div>
+
+                <div class="input_field">
+                    <label for="imagem">IMAGEM:</label>
+                    <?php if ($bateria->getImagem()): ?>
+                        <img src="data:<?php echo $bateria->getTipoImagem(); ?>;base64,<?php echo base64_encode($bateria->getImagem()); ?>" alt="Imagem da bateria">
+                        <p>Imagem atual</p>
+                    <?php else: ?>
+                        <p>Nenhuma imagem selecionada</p>
+                    <?php endif; ?>
+                    <input type="file" name="imagem" id="imagem">
+                </div>
             </div>
             <button class="save" type="submit">
                 Salvar
             </button>
         </form>
-
-    </div>
+        
     </div>
 </body>
 

@@ -25,7 +25,7 @@
             </div>
         </header>
 
-        <form class="form" action="./OPERACOES/create.php" method="POST">
+        <form class="form" action="./OPERACOES/create.php" method="POST" enctype="multipart/form-data">
             <div class="form_inputs">
                 <div class="input_field">
                     <label for="descricao">DESCRICÃO</label>
@@ -61,6 +61,11 @@
                 <div class="input_field">
                     <label for="vlrVenda">VALOR VENDA</label>
                     <input class="input" placeholder="Valor de venda" id="vlrVenda" name="vlrVenda" type="text" require>
+                </div>
+
+                <div class="input_field">
+                    <label for="imagem">IMAGEM:</label>
+                    <input type="file" name="imagem" id="imagem" required>
                 </div>
             </div>
             <button class="save" type="submit">
