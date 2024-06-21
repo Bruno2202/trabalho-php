@@ -28,10 +28,10 @@ $lstPiano = $bllPiano->Select();
         <header class="header">
             <h1 class="app_name">SOUNDS</h1>
             <nav class="navigation">
-                <a class="nav_option">SOBRE NÓS</a>
-                <a class="nav_option">CONTATO</a>
-                <a class="nav_option">PRODUTOS</a>
-                <a class="nav_option" href="https://github.com/Bruno2202/trabalho-php">MAIS</a>
+                <a class="nav_option" onclick="scrollToBottom()">PRODUTOS</a>
+                <a class="nav_option" href="../GUITARRA/guitarra.php">GUITARRA</a>
+                <a class="nav_option" href="../VIOLINO/violino.php">VIOLINO</a>
+                <a class="nav_option" href="../BATERIA/bateria.php">BATERIA</a>
             </nav>
             <div class="nav_icons">
                 <a href="./LOGIN/login.php" class="material-symbols-outlined">
@@ -91,6 +91,14 @@ $lstPiano = $bllPiano->Select();
     </div>
 
     <script src="../js/buyModal.js"></script>
+    <script>
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 
 </html>
