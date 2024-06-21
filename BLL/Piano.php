@@ -26,6 +26,12 @@ class Piano
         return $dalPiano->Update($piano);
     }
 
+    public function UpdateEstoque(\MODEL\Piano $piano)
+    {
+        $dalPiano = new \DAL\Piano();
+        return $dalPiano->UpdateEstoque($piano);
+    }
+
     public function Delete(int $id)
     {
         $dalPiano = new \DAL\Piano();

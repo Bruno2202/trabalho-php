@@ -57,15 +57,39 @@ $lstGuit = $bllGuit->Select();
         </div>
 
         <div class="instruments">
-            <?php foreach ($lstGuit as $guit) { ?>
-                <div class="instruments_card" id="<?php echo $guit->getID(); ?>">
-                    <?php echo '<img class="instrument_img" src="data: ' . $guit->getTipoImagem() . ';base64,' . base64_encode($guit->getImagem()) . '"/>'; ?>
-                    <h3 class="instrument_desc"><?php echo $guit->getDescricao(); ?></h3> 
-                    <p class="instrument_value">R$ <?php echo $guit->getVlrVenda(); ?></p> 
+            <?php foreach ($lstGuit as $guit) { 
+                if ($guit->getQtdeEstoque() > 0 ) {
+            ?>
+                <div class="instrument_container">
+                    <div class="instruments_card" id="<?php echo $guit->getID(); ?>">
+                        <?php echo '<img class="instrument_img" src="data: ' . $guit->getTipoImagem() . ';base64,' . base64_encode($guit->getImagem()) . '"/>'; ?>
+                        <h3 class="instrument_desc"><?php echo $guit->getDescricao(); ?></h3>
+                        <p class="instrument_value">R$ <?php echo $guit->getVlrVenda(); ?></p>
+                    </div>
+                    <button class="instrument_buy" onclick="showModal('modalOverlay<?php echo $guit->getID(); ?>')">
+                        Comprar
+                    </button>
+                    <div class="buy_modalOverlay" id="modalOverlay<?php echo $guit->getID(); ?>">
+                        <modal class="buy_modal" id="modal">
+                            <h1>Confirmar compra</h1>
+                            <div class="instrument_info">
+                                <h3>Produto: Bateria <?php echo $guit->getDescricao(); ?></h3>
+                                <h4>Quantidade: <input type="number" name="quant" id="quant<?php echo $guit->getID(); ?>" max="<?php echo $guit->getQtdeEstoque(); ?>" min="1" value="1" required="" onchange="updateTotal( <?php echo $guit->getVlrVenda(); ?>, 'quant<?php echo $guit->getID(); ?>', 'total<?php echo $guit->getID(); ?>')"></h4>
+                                <separator class="separator"></separator>
+                                <h5>Valor unitário: R$ <?php echo $guit->getVlrVenda(); ?></h4>
+                                <h4 id="total<?php echo $guit->getID(); ?>">Total: R$ <?php echo $guit->getVlrVenda(); ?></h4>
+                            </div>
+                        </modal>
+                        <button class="instrument_confirm" onclick="JavaScript:location.href='./OPERACOES/updateEstoque.php?id=' + '<?php echo $guit->getId(); ?>' + '&qtdeCompra=' + getQtdeCompra('quant<?php echo $guit->getID(); ?>')">
+                                Confirmar compra
+                        </button>
+                    </div>
                 </div>
-            <?php } ?>
+            <?php }} ?>
         </div>
     </div>
+
+    <script src="../js/buyModal.js"></script>
 </body>
 
 </html>

@@ -103,6 +103,29 @@ class Piano
         return $result;
     }
 
+    public function UpdateEstoque(\MODEL\Piano $piano)
+    {
+        $con = Conexao::conectar();
+
+        $sql = "UPDATE piano 
+                SET QTDE_ESTOQUE = ?
+                WHERE ID_PIANO = ?;";
+
+        $stmt = $con->prepare($sql);
+
+        $qtdeEstoque = $piano->getQtdeEstoque();
+        $id = $piano->getID();
+
+        $stmt->bindParam(1, $qtdeEstoque, PDO::PARAM_INT);
+        $stmt->bindParam(2, $id, PDO::PARAM_INT);
+
+        $result = $stmt->execute();
+
+        $con = Conexao::desconectar();
+    
+        return $result;
+    }
+
     public function Delete(int $id)
     {
         $sql = "delete from piano WHERE ID_PIANO = ?;";

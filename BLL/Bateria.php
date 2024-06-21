@@ -26,6 +26,12 @@ class Bateria
         return $dalBateria->Update($bateria);
     }
 
+    public function UpdateEstoque(\MODEL\Bateria $bateria)
+    {
+        $dalBateria = new \DAL\Bateria();
+        return $dalBateria->UpdateEstoque($bateria);
+    }
+
     public function Delete(int $id)
     {
         $dalBateria = new \DAL\Bateria();

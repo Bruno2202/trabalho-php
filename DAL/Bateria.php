@@ -103,6 +103,29 @@ class Bateria
         return $result;
     }
 
+    public function UpdateEstoque(\MODEL\Bateria $bateria)
+    {
+        $con = Conexao::conectar();
+
+        $sql = "UPDATE bateria 
+                SET QTDE_ESTOQUE = ?
+                WHERE ID_BATERIA = ?;";
+
+        $stmt = $con->prepare($sql);
+
+        $qtdeEstoque = $bateria->getQtdeEstoque();
+        $id = $bateria->getID();
+
+        $stmt->bindParam(1, $qtdeEstoque, PDO::PARAM_INT);
+        $stmt->bindParam(2, $id, PDO::PARAM_INT);
+
+        $result = $stmt->execute();
+
+        $con = Conexao::desconectar();
+    
+        return $result;
+    }
+
     public function Delete(int $id)
     {
         $sql = "delete from bateria WHERE ID_BATERIA = ?;";

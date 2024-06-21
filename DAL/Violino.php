@@ -99,6 +99,29 @@ class Violino
         return $result;
     }
 
+    public function UpdateEstoque(\MODEL\Violino $violino)
+    {
+        $con = Conexao::conectar();
+
+        $sql = "UPDATE violino 
+                SET QTDE_ESTOQUE = ?
+                WHERE ID_VIOLINO = ?;";
+
+        $stmt = $con->prepare($sql);
+
+        $qtdeEstoque = $violino->getQtdeEstoque();
+        $id = $violino->getID();
+
+        $stmt->bindParam(1, $qtdeEstoque, PDO::PARAM_INT);
+        $stmt->bindParam(2, $id, PDO::PARAM_INT);
+
+        $result = $stmt->execute();
+
+        $con = Conexao::desconectar();
+    
+        return $result;
+    }
+
     public function Delete(int $id)
     {
         $sql = "delete from violino WHERE ID_VIOLINO = ?;";

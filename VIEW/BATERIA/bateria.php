@@ -57,15 +57,40 @@ $lstBateria = $bllBateria->Select();
         </div>
 
         <div class="instruments">
-            <?php foreach ($lstBateria as $bateria) { ?>
-                <div class="instruments_card" id="<?php echo $bateria->getID(); ?>">
-                    <?php echo '<img class="instrument_img" src="data: ' . $bateria->getTipoImagem() . ';base64,' . base64_encode($bateria->getImagem()) . '"/>'; ?>
-                    <h3 class="instrument_desc"><?php echo $bateria->getDescricao(); ?></h3> 
-                    <p class="instrument_value">R$ <?php echo $bateria->getVlrVenda(); ?></p> 
+            <?php foreach ($lstBateria as $bateria) { 
+                if ($bateria->getQtdeEstoque() > 0 ) {
+            ?>
+                <div class="instrument_container">
+                    <div class="instruments_card" id="<?php echo $bateria->getID(); ?>">
+                        <?php echo '<img class="instrument_img" src="data: ' . $bateria->getTipoImagem() . ';base64,' . base64_encode($bateria->getImagem()) . '"/>'; ?>
+                        <h3 class="instrument_desc"><?php echo $bateria->getDescricao(); ?></h3>
+                        <p class="instrument_value">R$ <?php echo $bateria->getVlrVenda(); ?></p>
+                    </div>
+                    <button class="instrument_buy" onclick="showModal('modalOverlay<?php echo $bateria->getID(); ?>')">
+                        Comprar
+                    </button>
+                    <div class="buy_modalOverlay" id="modalOverlay<?php echo $bateria->getID(); ?>">
+                        <modal class="buy_modal" id="modal">
+                            <h1>Confirmar compra</h1>
+                            <div class="instrument_info">
+                                <h3>Produto: Bateria <?php echo $bateria->getDescricao(); ?></h3>
+                                <h4>Quantidade: <input type="number" name="quant" id="quant<?php echo $bateria->getID(); ?>" max="<?php echo $bateria->getQtdeEstoque(); ?>" min="1" value="1" required="" onchange="updateTotal( <?php echo $bateria->getVlrVenda(); ?>, 'quant<?php echo $bateria->getID(); ?>', 'total<?php echo $bateria->getID(); ?>')"></h4>
+                                <separator class="separator"></separator>
+                                <h5>Valor unitário: R$ <?php echo $bateria->getVlrVenda(); ?></h4>
+                                <h4 id="total<?php echo $bateria->getID(); ?>">Total: R$ <?php echo $bateria->getVlrVenda(); ?></h4>
+                            </div>
+                        </modal>
+                        <button class="instrument_confirm" onclick="JavaScript:location.href='./OPERACOES/updateEstoque.php?id=' + '<?php echo $bateria->getId(); ?>' + '&qtdeCompra=' + getQtdeCompra('quant<?php echo $bateria->getID(); ?>')">
+                                Confirmar compra
+                        </button>
+                    </div>
                 </div>
-            <?php } ?>
+            <?php }} ?>
         </div>
+
     </div>
+
+    <script src="../js/buyModal.js"></script>
 </body>
 
 </html>

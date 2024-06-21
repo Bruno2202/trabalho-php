@@ -4,7 +4,7 @@
 
 - Framework CSS: Bootstrap/Materialize/Bulma, etc... ✅
 
-- Movimentação de Dados (ex: atualização de estoque) 
+- Movimentação de Dados (ex: atualização de estoque)  ✅
 
 - Validação de Campos em 3 formulários (inserir) 
 

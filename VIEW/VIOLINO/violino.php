@@ -60,14 +60,36 @@ $lstViolino = $bllViolino->Select();
             <?php foreach ($lstViolino as $violino) { 
                 if ($violino->getQtdeEstoque() > 0 ) {
             ?>
-                <div class="instruments_card" id="<?php echo $violino->getID(); ?>">
-                    <?php echo '<img class="instrument_img" src="data: ' . $violino->getTipoImagem() . ';base64,' . base64_encode($violino->getImagem()) . '"/>'; ?>
-                    <h3 class="instrument_desc"><?php echo $violino->getDescricao(); ?></h3>
-                    <p class="instrument_value">R$ <?php echo $violino->getVlrVenda(); ?></p>
+                <div class="instrument_container">
+                    <div class="instruments_card" id="<?php echo $violino->getID(); ?>">
+                        <?php echo '<img class="instrument_img" src="data: ' . $violino->getTipoImagem() . ';base64,' . base64_encode($violino->getImagem()) . '"/>'; ?>
+                        <h3 class="instrument_desc"><?php echo $violino->getDescricao(); ?></h3>
+                        <p class="instrument_value">R$ <?php echo $violino->getVlrVenda(); ?></p>
+                    </div>
+                    <button class="instrument_buy" onclick="showModal('modalOverlay<?php echo $violino->getID(); ?>')">
+                        Comprar
+                    </button>
+                    <div class="buy_modalOverlay" id="modalOverlay<?php echo $violino->getID(); ?>">
+                        <modal class="buy_modal" id="modal">
+                            <h1>Confirmar compra</h1>
+                            <div class="instrument_info">
+                                <h3>Produto: Bateria <?php echo $violino->getDescricao(); ?></h3>
+                                <h4>Quantidade: <input type="number" name="quant" id="quant<?php echo $violino->getID(); ?>" max="<?php echo $violino->getQtdeEstoque(); ?>" min="1" value="1" required="" onchange="updateTotal( <?php echo $violino->getVlrVenda(); ?>, 'quant<?php echo $violino->getID(); ?>', 'total<?php echo $violino->getID(); ?>')"></h4>
+                                <separator class="separator"></separator>
+                                <h5>Valor unitário: R$ <?php echo $violino->getVlrVenda(); ?></h4>
+                                <h4 id="total<?php echo $violino->getID(); ?>">Total: R$ <?php echo $violino->getVlrVenda(); ?></h4>
+                            </div>
+                        </modal>
+                        <button class="instrument_confirm" onclick="JavaScript:location.href='./OPERACOES/updateEstoque.php?id=' + '<?php echo $violino->getId(); ?>' + '&qtdeCompra=' + getQtdeCompra('quant<?php echo $violino->getID(); ?>')">
+                                Confirmar compra
+                        </button>
+                    </div>
                 </div>
             <?php }} ?>
         </div>
     </div>
+
+    <script src="../js/buyModal.js"></script>
 </body>
 
 </html>

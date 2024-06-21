@@ -26,6 +26,12 @@ class Guitarra
         return $dalGuit->Update($guitarra);
     }
 
+    public function UpdateEstoque(\MODEL\Guitarra $guitarra)
+    {
+        $dalGuitarra = new \DAL\Guitarra();
+        return $dalGuitarra->UpdateEstoque($guitarra);
+    }
+
     public function Delete(int $id)
     {
         $dalGuit = new \DAL\Guitarra();

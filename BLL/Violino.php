@@ -26,6 +26,12 @@ class Violino
         return $dalViolino->Update($violino);
     }
 
+    public function UpdateEstoque(\MODEL\Violino $violino)
+    {
+        $dalViolino = new \DAL\Violino();
+        return $dalViolino->UpdateEstoque($violino);
+    }
+
     public function Delete(int $id)
     {
         $dalViolino = new \DAL\Violino();

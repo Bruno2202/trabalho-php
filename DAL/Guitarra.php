@@ -103,6 +103,29 @@ class Guitarra
         return $result;
     }
 
+    public function UpdateEstoque(\MODEL\Guitarra $guit)
+    {
+        $con = Conexao::conectar();
+
+        $sql = "UPDATE guitarra 
+                SET QTDE_ESTOQUE = ?
+                WHERE ID_GUITARRA = ?;";
+
+        $stmt = $con->prepare($sql);
+
+        $qtdeEstoque = $guit->getQtdeEstoque();
+        $id = $guit->getID();
+
+        $stmt->bindParam(1, $qtdeEstoque, PDO::PARAM_INT);
+        $stmt->bindParam(2, $id, PDO::PARAM_INT);
+
+        $result = $stmt->execute();
+
+        $con = Conexao::desconectar();
+    
+        return $result;
+    }
+
     public function Delete(int $id)
     {
         $sql = "delete from guitarra WHERE ID_GUITARRA = ?;";
