@@ -25,7 +25,7 @@
                     <input class="form_input" name="email" type="text" placeholder="Email" maxlength="50" required>
                     <input class="form_input" name="password" type="password" placeholder="Senha" maxlength="50" required>
                 </div>
-                <a class="form_link" href="../registro.php">Ainda não possui uma<span class="link_acc">&nbspconta?</span></a>
+                <a class="form_link" href="../RESGISTRO/registro.php">Ainda não possui uma<span class="link_acc">&nbspconta?</span></a>
                 <button class="form_button" name="action" type="submit">
                     Acessar
                 </button>

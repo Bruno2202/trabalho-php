@@ -25,7 +25,7 @@
             </div>
         </header>
 
-        <form class="form" action="./OPERACOES/create.php" method="POST" enctype="multipart/form-data">
+        <form class="form" name="cadForm" action="./OPERACOES/create.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
             <div class="form_inputs">
                 <div class="input_field">
                     <label for="descricao">DESCRICÃO</label>
@@ -74,7 +74,8 @@
         </form>
 
     </div>
-    </div>
+
+    <script src="validCad.js"></script>
 </body>
 
 </html>

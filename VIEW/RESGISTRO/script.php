@@ -1,19 +1,32 @@
 <?php 
 	include_once __DIR__ . '../../../DAL/Conexao.php';
 
+	$name = trim($_POST['name']); 
 	$email = trim($_POST['email']); 
-	$passowrd = trim($_POST['password']); 
+	$password = trim($_POST['password']); 
+	$password = md5($password);
 
-   	$sql = "Select * from USUARIOS where email= ?;";
-   	$con = DAL\Conexao::conectar(); 
-   	$query = $con->prepare($sql);
-   	$query->execute ([$email]);
-   	$linha = $query->fetch(\PDO::FETCH_ASSOC);
-   	DAL\Conexao::desconectar(); 
+	try {
+		$con = DAL\Conexao::conectar();
 
-    if (md5($passowrd) == $linha['SENHA']) {
-		session_start();
-		$_SESSION['login'] = $email;
-		header("location:../adm.php");
-    } else header("location:../home.php");
+		$sql = "INSERT INTO usuarios (NOME, EMAIL, SENHA) 
+				VALUES (:name, :email, :password)";
+
+		$query = $con->prepare($sql);
+		$query->bindParam(':name', $name);
+		$query->bindParam(':email', $email);
+		$query->bindParam(':password', $password);
+
+		if ($query->execute()) {
+			session_start();
+			$_SESSION['login'] = $email;
+			header("Location: ../adm.php");
+		} else {
+			header("Location: ../home.php");
+		}
+
+		DAL\Conexao::desconectar();
+	} catch (PDOException $e) {
+		echo "Erro: " . $e->getMessage();
+	}
 ?>

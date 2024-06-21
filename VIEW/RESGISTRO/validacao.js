@@ -3,7 +3,7 @@ function validateForm() {
     var email = document.forms["regForm"]["email"].value;
     var password = document.forms["regForm"]["password"].value;
 
-    if (email === "" || password === "" || name === "") {
+    if (name === "" || email === "" || password === "") {
         alert("Preencha todos os campos");
         return false;
     }
