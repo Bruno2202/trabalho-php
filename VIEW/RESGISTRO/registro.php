@@ -23,9 +23,9 @@
             <form class="form" onsubmit="">
                 <h1 class="form_title">Registro</h1>
                 <div class="form_inputs">
-                    <input class="form_input" name="nome" type="text" placeholder="Nome" required>
-                    <input class="form_input" name="email" type="text" placeholder="Email" required>
-                    <input class="form_input" name="senha" type="password" placeholder="Senha" required>
+                    <input class="form_input" name="nome" type="text" placeholder="Nome" maxlength="50" required>
+                    <input class="form_input" name="email" type="text" placeholder="Email" maxlength="50" required>
+                    <input class="form_input" name="senha" type="password" placeholder="Senha" maxlength="50" required>
                 </div>
                 <a class="form_link" href="./login.php">Já tem uma <span class="link_acc">&nbspconta?</span></a>
                 <button class="form_button" type="submit">

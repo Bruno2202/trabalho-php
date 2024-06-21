@@ -19,11 +19,11 @@
             <img class="vector" src="../../ASSETS/IMG/vector.png">
         </div>
         <div class="card_right">
-            <form class="form" method="POST" action="./script.php">
+            <form class="form" name="loginForm" method="POST" action="./script.php" onsubmit="return validateForm()">
                 <h1 class="form_title">Entrar</h1>
                 <div class="form_inputs">
-                    <input class="form_input" name="email" type="text" placeholder="Email" required>
-                    <input class="form_input" name="password" type="password" placeholder="Senha" required>
+                    <input class="form_input" name="email" type="text" placeholder="Email" maxlength="50" required>
+                    <input class="form_input" name="password" type="password" placeholder="Senha" maxlength="50" required>
                 </div>
                 <a class="form_link" href="../registro.php">Ainda não possui uma<span class="link_acc">&nbspconta?</span></a>
                 <button class="form_button" name="action" type="submit">
@@ -32,6 +32,8 @@
             </form>
         </div>
     </div>
+
+    <script src="validacao.js"></script>
 </body>
  
 </html>
