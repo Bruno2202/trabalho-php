@@ -6,7 +6,7 @@
 
 - Movimentação de Dados (ex: atualização de estoque)  ✅
 
-- Validação de Campos em 3 formulários (inserir) 
+- Validação de Campos em 3 formulários (inserir) ✅
 
 - Pagina Principal/Menu ✅
 

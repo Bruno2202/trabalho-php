@@ -23,9 +23,9 @@
         <header class="header">
             <h1 class="app_name">SOUNDS</h1>
             <nav class="navigation">
-                <a class="nav_option">SOBRE NÓS</a>
-                <a class="nav_option">CONTATO</a>
-                <a class="nav_option">PRODUTOS</a>
+                <a class="nav_option" href="https://github.com/Bruno2202/trabalho-php">SOBRE NÓS</a>
+                <a class="nav_option" href="https://github.com/Bruno2202/trabalho-php">CONTATO</a>
+                <a class="nav_option" onclick="scrollToBottom()">PRODUTOS</a>
                 <a class="nav_option" href="https://github.com/Bruno2202/trabalho-php">MAIS</a>
             </nav>
             <div class="nav_icons">
@@ -82,6 +82,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./js/search.js"></script>
+    <script>
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 
 </html>
